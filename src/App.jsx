@@ -1,6 +1,7 @@
+import { Box, CssBaseline } from "@mui/material";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./App.css";
 import Layout from "./components/Layout/Layout";
+import Home from "./pages/Home/Home";
 
 function App() {
   const router = createBrowserRouter([
@@ -8,6 +9,10 @@ function App() {
       path: "/",
       element: <Layout />,
       children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
         {
           path: "/ticket",
           element: <h2>This is child</h2>,
@@ -21,9 +26,10 @@ function App() {
   ]);
 
   return (
-    <div className="App">
+    <Box>
       <RouterProvider router={router} />
-    </div>
+      <CssBaseline />
+    </Box>
   );
 }
 
