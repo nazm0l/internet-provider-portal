@@ -15,7 +15,14 @@ import {
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = [
+  "Dashboard",
+  "Pay Bill",
+  "Payment History",
+  "Support Ticket",
+  "Report",
+  "Change Plan",
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
